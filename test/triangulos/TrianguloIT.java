@@ -67,12 +67,24 @@ public class TrianguloIT {
     @Test
     public void testClassify3() {
         System.out.println("Prueba tipo de triangulo.");
-        int a = 30;
-        int b = 20;
-        int c = 20;
+        int a = 20;
+        int b = 30;
+        int c = 40;
         String expResult = "ESCALENO";
         TrianguloType result = Triangulo.classify(a, b, c);
         assertEquals(TrianguloType.ESCALENO, result);
+        
+    }
+    
+     @Test
+    public void testClassify4() {
+        System.out.println("Prueba tipo de triangulo.");
+        int a = 30;
+        int b = 20;
+        int c = -20;
+        String expResult = "NOVALIDO";
+        TrianguloType result = Triangulo.classify(a, b, c);
+        assertEquals(TrianguloType.NOVALIDO, result);
         
     }
 }
